@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-100;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4;
+  }
+}
+
+@keyframes highlight {
+  0% {
+    background-color: rgba(59, 130, 246, 0.1);
+    transform: scale(1);
+  }
+  50% {
+    background-color: rgba(59, 130, 246, 0.2);
+    transform: scale(1.01);
+  }
+  100% {
+    background-color: transparent;
+    transform: scale(1);
+  }
+}
+
+.highlight-post {
+  animation: highlight 2s ease-out;
+}
